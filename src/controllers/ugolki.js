@@ -14,6 +14,7 @@ module.exports.getUgolkis = async function(req, res) { console.log('getUgolkis')
 };
 
 module.exports.postUgolki = async function(req, res) {
+  console.log('postUgolki...');
 
 // check is this book already in DB 
   const isUgolkiInDB = await Ugolki.findOne({name: req.body.name});
