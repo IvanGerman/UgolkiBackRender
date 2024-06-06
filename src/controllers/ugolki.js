@@ -65,7 +65,7 @@ module.exports.deleteUgolki = async function(req, res) {
 };
 
 
-module.exports.updateUgolki = async function(req, res) { console.log('here------');
+module.exports.updateUgolki = async function(req, res) { console.log('here------', req.params.id);
 
     
   try {
