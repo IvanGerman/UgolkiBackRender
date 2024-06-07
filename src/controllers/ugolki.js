@@ -71,13 +71,13 @@ module.exports.updateUgolki = async function(req, res) { console.log('here------
   try {
      const result = await Ugolki.findOneAndUpdate(
       { _id: req.params.id },
-      { name: req.body.name },
-      {linkToVideo: req.body.linkToVideo},
-      {amountPiece: req.body.amountPiece},
-      {amountKG: req.body.amountKG},
-      {pricePiece: req.body.pricePiece},
-      {priceKG: req.body.priceKG},
-      {numberInKG: req.body.numberInKG},
+      { name: req.body.name ,
+      linkToVideo: req.body.linkToVideo,
+      amountPiece: req.body.amountPiece,
+      amountKG: req.body.amountKG,
+      pricePiece: req.body.pricePiece,
+      priceKG: req.body.priceKG,
+      numberInKG: req.body.numberInKG},
       { new: true });
      res.status(200).json(`Ugolki has been updated, new ugolki amountKG is: ${result.amountKG} `);
   } catch {
